@@ -1,3 +1,6 @@
+
+
+
 /* header */
 header{
   display: flex;
@@ -25,6 +28,8 @@ header{
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
 }
 #line1, #line2{
   display: block;
@@ -106,13 +111,76 @@ header{
 
 #mv-circle{
   position: absolute;
-  left: -0px;
+  left: -150px;
   top: 100px;
   z-index: -1;
+  animation-name: anim_r;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
 }
 
 #videotext{
   position: absolute;
   right: 0;
   top: 430px;
+}
+
+
+@keyframes anim_r {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* about */
+.color{
+  color: #ec821c;
+}
+#about{
+  padding: 100px 0;
+  position: relative;
+}
+.about-content{
+  width: 1000px;
+  margin: 60px auto;
+}
+.title{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 0.625;
+  letter-spacing: .1em;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#about marquee{
+  font-size: 180px;
+  color: #e5e5e5;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1.1;
+}
+.marquees{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  margin: auto;
+  z-index: -1;
+}
+.content-title{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.74;
+  margin-bottom: 50px;
 }
