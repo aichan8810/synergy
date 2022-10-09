@@ -1,5 +1,8 @@
 
-
+@font-face {
+	font-family: 'verdana';
+	src: url(../font/verdana-bold-italic.ttf);
+}
 
 /* header */
 header{
@@ -99,7 +102,7 @@ header{
 .content-explain{
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.875;
+  line-height: 2.25;
 }
 
 #mv .content-explain{
@@ -115,17 +118,13 @@ header{
   top: 100px;
   z-index: -1;
   animation-name: anim_r;
-  animation-duration: 4s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-direction: normal;
   animation-iteration-count: infinite;
 }
+ /* VIDEO BACKGROUND */
 
-#videotext{
-  position: absolute;
-  right: 0;
-  top: 430px;
-}
 
 
 @keyframes anim_r {
@@ -161,10 +160,10 @@ header{
   margin: 0 auto;
 }
 
-#about marquee{
+.marquees marquee{
   font-size: 180px;
   color: #e5e5e5;
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: .05em;
   line-height: 1.1;
 }
@@ -183,4 +182,197 @@ header{
   font-weight: 500;
   line-height: 1.74;
   margin-bottom: 50px;
+}
+
+/* PHILOSOPHY */
+
+#philosophy{
+  position: relative;
+  background-color: #f2f0ed;
+  padding: 100px 0;
+  z-index: 2;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#philosophy .marquees{
+  z-index: -1;
+}
+#philosophy .marquees marquee{
+  color: #fee3ad;
+}
+
+.img-bg{
+  position: absolute;
+  top: 189px;
+  width: 1183px;
+  height: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#symbol{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* feature */
+
+#features{
+  position: relative;
+  padding: 100px 0;
+}
+
+.feature-table{
+  width: 1000px;
+  margin: 60px auto;
+  border: 1px solid black;
+}
+.flex-features{
+  width: 100%;
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+.flex-features:nth-of-type(2){
+  flex-direction: row-reverse;
+}
+.flex-features:nth-of-type(3){
+  border-bottom: none;
+}
+.short-sec{
+  width: 31.3%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid black;
+}
+.flex-features:nth-of-type(2) .short-sec{
+  border-right: none;
+  border-left: 1px solid black;
+}
+.short-sec p{
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.38;
+}
+.long-sec{
+  width: 69.7%;
+}
+.long-sec p{
+  font-size: 16px;
+  line-height: 2.25;
+  padding: 0 30px;
+}
+
+#line-bg{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  z-index: -1;
+}
+
+/* plan */
+
+#plan{
+  position: relative;
+  width: 100%;
+  padding: 100px 0 80px;
+  background-color: #ec821c;
+  color: white;
+  z-index: 2;
+}
+
+.plan-exp{
+  width: 1000px;
+  margin: 50px auto;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: .05em;
+  position: relative;
+  z-index: 1;
+}
+
+#plan marquee{
+  position: absolute;
+  top: 127px;
+  font-size: 180px;
+  color: #e5e5e5;
+  font-weight: 900;
+  letter-spacing: .05em;
+  line-height: 1.1;
+  opacity: .4;
+  z-index: 0;
+}
+
+.plan-center{
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+.center-title{
+  line-height: 36px;
+  font-size: 22px;
+  letter-spacing: .05em;
+}
+.center-title span{
+  font-size: 28px;
+}
+.center-circle{
+  width: 375px;
+  height: 375px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #f28358;
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: -2;
+  opacity: .8;
+}
+
+.center-exp{
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: -40px;
+  position: relative;
+  z-index: -3;
+  padding: 80px 48px;
+  background-color: #f28358;
+  border-radius: 10px;
+  opacity: 1;
+}
+.center-exp span{
+  font-size: 16px;
+  line-height: 2.25;
+  opacity: 1;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+.register-sec{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto 0;
+}
+.register-sec a{
+  width: fit-content;
+  margin: 30px auto;
 }
